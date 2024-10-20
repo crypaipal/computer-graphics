@@ -54,7 +54,7 @@ def drawCarpet(x, y, a, b, similarity):
 
 def render(time):
     glClear(GL_COLOR_BUFFER_BIT) # wyczyszczenie ramki w pamięci
-    drawCarpet(-60, 40, 120, 80, 2)
+    drawCarpet(-60, 40, 120, 80, 4)
     glFlush()   # zawartość pamięci jest przesyłana do wyświetlenia
 
 

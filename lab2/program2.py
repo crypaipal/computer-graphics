@@ -23,9 +23,8 @@ def drawRectangle(x, y, a, b):
     glVertex2f(x + a, y)
     glColor3f(0.0, 0.0, 1.0)
     glVertex2f(x, y - b)
-    glEnd()
 
-    glBegin(GL_TRIANGLES)
+
     glColor3f(0.0, 1.0, 0.0)
     glVertex2f(x + a, y)
     glColor3f(0.0, 0.0, 1.0)

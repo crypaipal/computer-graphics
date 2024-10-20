@@ -53,7 +53,7 @@ def render(time):
     glClear(GL_COLOR_BUFFER_BIT) # wyczyszczenie ramki w pamięci
     glLoadIdentity() # zwraca układ współrzędnych w początkowe położenie
     glTranslatef(-50, 25, 0) # obraz w centrum 
-    snowballKocha(100, 8)
+    snowballKocha(100, 5)
     glFlush()   # zawartość pamięci jest przesyłana do wyświetlenia
 
 
