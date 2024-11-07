@@ -8,7 +8,7 @@ from OpenGL.GLU import *
 
 def startup():
     update_viewport(None, 400, 400)
-    glClearColor(1.0, 1.0, 1.0, 1.0)
+    glClearColor(0.0, 0.0, 0.0, 1.0)
     glEnable(GL_DEPTH_TEST)  # mechanizm bufora głębi
 
 def shutdown():
@@ -35,8 +35,9 @@ def axes():
 def midpoint(v1, v2):
     return [(v1[i] + v2[i]) / 2.0 for i in range(3)]
 
-# rusuje ostrosłup z 4 trójkątów
+# rusuje piramide z 4 trójkątów
 def drawTriangles(v0, v1, v2, v3):
+
     glBegin(GL_TRIANGLES)
     
     # pierwszy trójkąt
@@ -65,7 +66,7 @@ def drawTriangles(v0, v1, v2, v3):
     
     glEnd()
 
-# rekurencyjnie rysujemy ostrosłupy
+# rekurencyjnie rysujemy piramide
 def sierpinskiTriangle3d(v0, v1, v2, v3, depth):
     if depth == 0:
         drawTriangles(v0, v1, v2, v3)
@@ -102,7 +103,7 @@ def render(time):
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
     glLoadIdentity()
     spin(0.1 * time * 180 / 3.1415) 
-    drawSierpinski(2) 
+    drawSierpinski(3) 
     axes()  # wywołanie fukcji rysującej układ współrzędnych
     glFlush()
 

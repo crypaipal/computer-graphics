@@ -45,8 +45,8 @@ def drawEgg(N):
 
     # wypełneinie tablic u, v wartościami z zakresu [0;1]
     for i in range(0, N):
-        tablica_u[i] = (i)*(1.0 / (N - 1.0))
-        tablica_v[i] = (i)*(1.0 / (N - 1.0))
+        tablica_u[i] = i * (1.0 / (N - 1.0))
+        tablica_v[i] = i * (1.0 / (N - 1.0))
 
     # obliczamy koordynaty x, y, z dla każdego punktu 
     for i in range(0, N):

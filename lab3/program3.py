@@ -48,8 +48,8 @@ def drawEgg(N):
 
     # wypełneinie tablic u, v wartościami z zakresu [0;1]
     for i in range(0, N):
-        tablica_u[i] = (i)*(1.0 / (N - 1.0))
-        tablica_v[i] = (i)*(1.0 / (N - 1.0))
+        tablica_u[i] = i * (1.0 / (N - 1.0))
+        tablica_v[i] = i * (1.0 / (N - 1.0))
 
     # obliczamy koordynaty x, y, z dla każdego punktu 
     for i in range(0, N):
@@ -60,7 +60,7 @@ def drawEgg(N):
             tab[i][j][1] = 160 * u ** 4 - 320 * u ** 3 + 160 * u ** 2 - 5
             tab[i][j][2] = (-90 * u ** 5 + 225 * u **4 - 270 * u ** 3 + 180 * u ** 2 - 45 * u) * math.sin(math.pi * v)       
     
-    # rysowanie linii na ekranie            
+    # rysowanie trójkątów na ekranie            
     for i in range(0, N):
         for j in range(0, N):
             
@@ -76,7 +76,6 @@ def drawEgg(N):
 
             glColor3f(random.random(), random.random(), random.random())
             glVertex3f(tab[i + 1][j][0], tab[i + 1][j][1], tab[i + 1][j][2])
-
             # zamykanie siatki poziomo
             if(i == -1):
                 i = N - 1
