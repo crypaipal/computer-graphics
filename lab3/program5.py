@@ -103,7 +103,7 @@ def render(time):
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
     glLoadIdentity()
     spin(0.1 * time * 180 / 3.1415) 
-    drawSierpinski(3) 
+    drawSierpinski(0) 
     axes()  # wywołanie fukcji rysującej układ współrzędnych
     glFlush()
 
