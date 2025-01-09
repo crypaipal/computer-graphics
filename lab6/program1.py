@@ -64,7 +64,7 @@ def startup():
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR) # włączają mechanizm teksturowania i opisują jego ustawienia
 
     # wczytanie obrazka z dysku i załadowanie go do pamięci
-    image = Image.open("P6_t.tga")
+    image = Image.open("lab6/tekstury/P6_t.tga")
 
     glTexImage2D(
         GL_TEXTURE_2D, 0, 3, image.size[0], image.size[1], 0,
